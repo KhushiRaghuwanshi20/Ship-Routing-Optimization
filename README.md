@@ -1,51 +1,64 @@
+ 📌 Project Overview
 
-📌 Project Overview
+The maritime industry is a major consumer of fossil fuels. This project focuses on developing a **Python-based optimization algorithm** to determine the most efficient sea route between ports in the Indian Ocean.
 
-Ship Route Optimization is an intelligent system that finds the shortest, safest, and most cost-effective route for ships.
-It analyzes key factors such as distance, fuel cost, and travel time to recommend the best possible path between ports.
-The goal is to make shipping faster, cheaper, and more efficient.
+Unlike standard navigation tools, this algorithm is "Versatile and Fast," meaning it optimizes for multiple objectives: **Fuel Efficiency**, **Route Safety**, and **Travel Time**. It dynamically accounts for environmental "forcings" such as surface winds, ocean currents, and wave heights.
 
-⭐ Key Features
+## 🎯 Key Objectives
 
-1.Shortest route calculation using graph algorithms
-2.Fuel cost and travel time estimation
-3.Optimized path between multiple ports
-4.Fast and efficient processing
-5.Scalable for large datasets
-----------------------------------------------------------------------------------
+* **Fuel Optimization:** Identify routes that minimize fuel consumption to reduce costs and  emissions.
+* **Weather Safety:** Avoid storms and heavy seas using real-time weather data to protect the ship and crew.
+* **Profit Speed Calculation:** Determine the optimal speed that balances time value against fuel costs.
+* **Customizability:** Support varying ship dimensions and drift characteristics for different vessel types.
 
-🛠️ Technology Stack
+## 🛠️ Technical Stack
 
-1.Programming Language: Python / Java
-2.Algorithm: Dijkstra / Graph Algorithm
-3.Data Storage: CSV Files
-4.Tools: VS Code, GitHub, Jira
---------------------------------------------------------------------------------
+* **Language:** Python (Open-source implementation)
+* **Algorithms:** A* (A-Star) Search modified for multi-objective maritime constraints
+* **Visualization:** React.js & Leaflet.js for interactive map plotting
+* **Project Management:** Jira (Agile Kanban Board)
+* **Version Control:** Git & GitHub
 
-🔁 Project Workflow
+---
 
-1.User selects source and destination ports
-2.System loads port and route data
-3.A graph is created from the data
-4.The algorithm calculates the shortest path
-5.The system displays the best route with cost and time
-------------------------------------------------------------
+## 📂 Project Directory Structure
 
-📂 Repository Structure
-
-ship-route-optimization/
-│
-├── data/                   # Port & route datasets
-│   └── ports.csv
-│   └── routes.csv
-│
+```text
+Optimal-Ship-Routing/
+├── data/                   # Maritime datasets (Ports, Bathymetry)
+│   ├── ports.json          # Coordinates for Indian Ocean ports
+│   └── land_mask.geojson   # Coastal and island boundary data
+├── docs/                   # Documentation and UML diagrams
+│   ├── vision_doc.pdf      # Project Vision & Scope
+│   └── use_case_diag.png   # Functional modeling diagrams
 ├── src/                    # Source code
-│   ├── main.py             # Entry point
-│   ├── algorithm.py       # Route calculation logic
-│   └── utils.py            # Helper functions
-│
-├── output/                 # Generated results
-│   └── best_route.txt
-│
-├── README.md               # Project documentation
-└── requirements.txt        # Required libraries
+│   ├── algorithms/         # Logic for A* and pathfinding
+│   │   └── a_star.py
+│   ├── models/             # Performance curves & fuel math
+│   │   └── ship_model.py
+│   ├── api/                # Weather API integration scripts
+│   │   └── weather_svc.py
+│   └── main.py             # Application entry point
+├── frontend/               # React & Leaflet.js visualization
+│   └── ...
+├── tests/                  # Unit tests for algorithm accuracy
+├── .gitignore              # Files to be ignored by Git
+├── README.md               # Project overview and guide
+└── requirements.txt        # Python dependencies
+
+
+
+## 🏗️ System Architecture
+
+1. **Data Layer:** Fetches weather forecasts and port coordinates.
+2. **Logic Layer:** Processes ship performance curves and runs the A* optimization.
+3. **Visualization Layer:** Renders the calculated optimal route on a Leaflet.js map.
+
+
+## 📜 Development Roadmap
+
+* **Phase 1:** Planning, Requirement Analysis, and Infrastructure Setup
+* **Phase 2:** Functional Modeling (Use Case Diagrams) and System Design
+* **Phase 3:** Backend Implementation (A* Logic & Data Integration)
+* **Phase 4:** Frontend Integration and Final Testing
+
