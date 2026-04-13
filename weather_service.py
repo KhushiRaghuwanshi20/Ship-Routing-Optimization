@@ -18,6 +18,7 @@ from datetime import datetime
 _weather_cache = {}  # { (rounded_lat, rounded_lon): penalty }
 
 # ============================================================
+# INDIAN OCEAN WEATHER ZONES (Research-based realistic data)
 # ============================================================
 
 # Cyclone-prone zones in Indian Ocean (lat_center, lon_center, intensity, radius_deg)
