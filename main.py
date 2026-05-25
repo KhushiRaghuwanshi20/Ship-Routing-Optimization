@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+
 import folium
 import numpy as np
 from global_land_mask import globe
@@ -96,7 +96,7 @@ folium.Marker(route_coords[-1], popup="Mauritius", icon=folium.Icon(color='red',
 
 my_map.save("advanced_route.html")
 print("Advanced Diverse Routing Complete! Open 'advanced_route.html'.")
-=======
+
 import folium
 import numpy as np
 from global_land_mask import globe
@@ -194,4 +194,4 @@ folium.Marker(route_coords[-1], popup="Mauritius", icon=folium.Icon(color='red',
 
 my_map.save("advanced_route.html")
 print("Routing Complete! 'advanced_route.html' file check karein.")
->>>>>>> Stashed changes
+
